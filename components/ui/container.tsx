@@ -1,5 +1,6 @@
 import React from "react";
 
+export const revalidate = 0;
 interface ContainerProps {
   children: React.ReactNode;
 }
