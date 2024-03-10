@@ -70,9 +70,6 @@ const Category: React.FC<CategoryPageProps> = async ({
           </div>
         </div>
       </Container>
-      {products.map((product) => (
-        <div key={product.id}>{product.name}</div>
-      ))}
     </div>
   );
 };
