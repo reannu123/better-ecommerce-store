@@ -1,4 +1,4 @@
-import getbillboard from "@/actions/get-billboard";
+import getBillboard from "@/actions/get-billboard";
 import getCategories from "@/actions/get-categories";
 import getProducts from "@/actions/get-products";
 import Billboard from "@/components/billboard";
@@ -8,7 +8,7 @@ import Container from "@/components/ui/container";
 const HomePage = async () => {
   const products = await getProducts({ isFeatured: true });
   const categories = await getCategories();
-  const billboard = await getbillboard(categories[0].billboard.id);
+  const billboard = await getBillboard(categories[0].billboardId);
   return (
     <Container>
       <div className="space-y-10 pb-10">
