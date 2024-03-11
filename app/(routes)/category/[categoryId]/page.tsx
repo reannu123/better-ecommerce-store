@@ -10,7 +10,9 @@ import NoResults from "@/components/ui/no-results";
 import ProductCard from "@/components/ui/product-card";
 import MobileFilters from "./components/mobile-filters";
 import Button from "@/components/ui/button";
+import getBillboard from "@/actions/get-billboard";
 
+export const revalidate = 0;
 interface CategoryPageProps {
   params: {
     categoryId: string;
@@ -33,11 +35,11 @@ const Category: React.FC<CategoryPageProps> = async ({
   const sizes = await getSizes();
   const colors = await getColors();
   const category = await getCategory(params.categoryId);
-
+  const billboard = await getBillboard(category.billboardId);
   return (
     <div className="bg-white">
       <Container>
-        <Billboard data={category.billboard}></Billboard>
+        <Billboard data={billboard}></Billboard>
         <div className="px-4 sm:px-6 lg:px-8 pb-24">
           <div className="lg:grid lg:grid-cols-5 lg:gap-8">
             <MobileFilters
