@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next experimental-compile",
+    "build": "next build",
     "generate": "next experimental-generate",
     "start": "next start -p 3001",
     "lint": "next lint"
