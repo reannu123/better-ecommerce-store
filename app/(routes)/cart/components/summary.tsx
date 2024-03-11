@@ -29,6 +29,10 @@ const Summary = () => {
   );
 
   const onCheckout = async () => {
+    if (items.length === 0) {
+      toast.error("Cart is empty!");
+      return;
+    }
     try {
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
@@ -36,7 +40,8 @@ const Summary = () => {
           productIds: items.map((item) => item.id),
         }
       );
-      window.location = response.data.redirectUrl;
+      console.log(response);
+      window.location = response.data.attributes.checkout_url;
     } catch (error: any) {
       toast.error(`Error occurred while placing order: ${error}`);
     }
