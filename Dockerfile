@@ -13,11 +13,7 @@ RUN npm i
 
 # Copy all files
 COPY . .
-ENV PORT=3000
 
-EXPOSE 3000
-# Run npm start to start the server
+
 RUN chmod +x start.sh
-
-# Run the script when the container starts
 CMD [ "./start.sh" ]
