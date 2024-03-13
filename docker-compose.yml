@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app:
+    container_name: $APP_NAME
+    image: $IMAGE
+    ports:
+      - "${C_PORT}:${PORT}"
+    env_file:
+      - stack.env
+    restart: always
+    networks:
+      - shop-network
+networks:
+  shop-network:
+    external: true
