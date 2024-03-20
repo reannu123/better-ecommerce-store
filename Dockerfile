@@ -14,4 +14,6 @@ RUN npm i
 # Copy all files
 COPY . .
 
-CMD [ "npm", "start" ]
+
+RUN chmod +x start.sh
+CMD [ "./start.sh" ]
