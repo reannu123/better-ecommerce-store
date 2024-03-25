@@ -33,8 +33,6 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
     cart.addItem(data.productVariants[0]);
   };
 
-  const onAddtoCart = () => {};
-
   return (
     <div
       onClick={handleClick}
