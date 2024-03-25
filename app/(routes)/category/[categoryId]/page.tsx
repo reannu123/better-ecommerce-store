@@ -3,10 +3,8 @@ import getProducts from "@/actions/get-products";
 import Billboard from "@/components/billboard";
 import Container from "@/components/ui/container";
 import React from "react";
-import Filter from "./components/filter";
 import NoResults from "@/components/ui/no-results";
 import ProductCard from "@/components/ui/product-card";
-import MobileFilters from "./components/mobile-filters";
 import Button from "@/components/ui/button";
 import getBillboard from "@/actions/get-billboard";
 
