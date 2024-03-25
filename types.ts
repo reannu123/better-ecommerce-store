@@ -13,15 +13,22 @@ export interface Category {
 export interface Product {
   id: string;
   category: Category;
+  description: string;
   name: string;
   price: string;
   isFeatured: boolean;
-  size: Size;
+  productVariants: ProductVariant[];
   images: Image[];
-  color: Color;
+  variants: Variant[];
 }
 
-export interface Size {
+export interface Variant {
+  id: string;
+  title: string;
+  options: Option[];
+}
+
+export interface Option {
   id: string;
   name: string;
   value: string;
@@ -32,8 +39,9 @@ export interface Image {
   url: string;
 }
 
-export interface Color {
+export interface ProductVariant {
   id: string;
-  name: string;
-  value: string;
+  product: Product;
+  price: string;
+  options: Option[];
 }

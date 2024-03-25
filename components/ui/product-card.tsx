@@ -30,10 +30,8 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
 
   const onAddToCart: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.stopPropagation();
-    cart.addItem(data);
+    cart.addItem(data.productVariants[0]);
   };
-
-  const onAddtoCart = () => {};
 
   return (
     <div
