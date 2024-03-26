@@ -25,7 +25,16 @@ export default function RootLayout({
         <ToastProvider />
         <Navbar />
         {children}
-        <Footer />
+        <Footer>
+          Developed by{" "}
+          <a
+            href="https://reannuinstrella.me"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="font-semibold">Reannu.dev</span>
+          </a>
+        </Footer>
       </body>
     </html>
   );
