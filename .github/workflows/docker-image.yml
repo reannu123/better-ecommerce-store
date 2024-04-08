@@ -28,10 +28,10 @@ jobs:
 
     - name: Build the Docker image and Push to DockerHub
       uses: docker/build-push-action@v5
-      env:
-        NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL}}
       with:
         context: .
+        build-args: |
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL}}
         file: ./Dockerfile
         platforms: linux/arm64, linux/amd64
         push: true
