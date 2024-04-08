@@ -6,6 +6,7 @@ import { useCart } from "@/hooks/use-cart";
 import { toast } from "react-hot-toast";
 import Currency from "@/components/ui/currency";
 import Button from "@/components/ui/button";
+import { env } from "next-runtime-env";
 
 const Summary = () => {
   const searchParams = useSearchParams();
@@ -35,7 +36,7 @@ const Summary = () => {
     }
     try {
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
+        `${env("NEXT_PUBLIC_API_URL")}/checkout`,
         {
           productIds: items.map((item) => item.id),
         }
