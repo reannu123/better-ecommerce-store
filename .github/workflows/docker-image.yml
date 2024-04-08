@@ -34,5 +34,5 @@ jobs:
         platforms: linux/arm64, linux/amd64
         push: true
         tags: ${{ github.repository }}:latest
-        build-args: 
+        build-args: |
           NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}
