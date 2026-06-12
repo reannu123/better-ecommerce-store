@@ -1,7 +1,7 @@
 import { Product } from "@/types";
-import { env } from "next-runtime-env";
+import { getStoreApiUrl } from "@/lib/api";
 
-const URL = `${env("NEXT_PUBLIC_API_URL")}/products`;
+const URL = `${getStoreApiUrl()}/products`;
 
 const getProduct = async (id: string): Promise<Product> => {
   const res = await fetch(`${URL}/${id}`);

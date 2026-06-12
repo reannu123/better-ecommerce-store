@@ -1,7 +1,7 @@
 import { Billboard } from "@/types";
-import { env } from "next-runtime-env";
+import { getStoreApiUrl } from "@/lib/api";
 
-const URL = `${env("NEXT_PUBLIC_API_URL")}/billboards`;
+const URL = `${getStoreApiUrl()}/billboards`;
 
 const getBillboard = async (id: string): Promise<Billboard> => {
   const res = await fetch(`${URL}/${id}`);

@@ -44,7 +44,10 @@ const Summary = () => {
       console.log(response);
       window.location = response.data.attributes.checkout_url;
     } catch (error: any) {
-      toast.error(`Error occurred while placing order: ${error}`);
+      const message = axios.isAxiosError(error)
+        ? error.response?.data?.error || "Unable to create a checkout session."
+        : "Unable to create a checkout session.";
+      toast.error(message);
     }
   };
 

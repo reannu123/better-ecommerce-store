@@ -1,7 +1,7 @@
 import { Category } from "@/types";
-import { env } from "next-runtime-env";
+import { getStoreApiUrl } from "@/lib/api";
 
-const URL = `${env("NEXT_PUBLIC_API_URL")}/categories`;
+const URL = `${getStoreApiUrl()}/categories`;
 
 const getCategories = async (): Promise<Category[]> => {
   const res = await fetch(URL);

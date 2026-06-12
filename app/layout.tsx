@@ -10,8 +10,8 @@ import { PublicEnvScript } from "next-runtime-env";
 const font = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Store",
-  description: "Store front",
+  title: "Better Ecommerce Store",
+  description: "Customer storefront for Better Ecommerce Admin.",
 };
 
 export default function RootLayout({
