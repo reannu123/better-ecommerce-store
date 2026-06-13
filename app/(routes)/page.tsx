@@ -8,13 +8,18 @@ import Container from "@/components/ui/container";
 export const revalidate = 0;
 
 const HomePage = async () => {
-  const products = await getProducts({ isFeatured: true });
-  const categories = await getCategories();
-  const billboard = await getBillboard(categories[0].billboardId);
+  const [products, categories] = await Promise.all([
+    getProducts({ isFeatured: true }),
+    getCategories(),
+  ]);
+  const billboard = categories[0]
+    ? await getBillboard(categories[0].billboardId)
+    : null;
+
   return (
     <Container>
       <div className="space-y-10 pb-10">
-        <Billboard data={billboard} />
+        {billboard && <Billboard data={billboard} />}
         <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
           <ProductList
             title="Featured Products"
