@@ -1,4 +1,8 @@
 node_modules
 .vscode
 .env
+.env.*
+!.env.example
 .next
+.git
+npm-debug.log*
