@@ -6,9 +6,9 @@ Last updated: 2026-06-20
 
 - Name: Better Ecommerce Store
 - Path: `/home/reannu123/Projects/portfolio/better-ecommerce-store`
-- Status: active
+- Status: complete
 - Stage: revival
-- Branch: `revive/project-setup`
+- Branch: `main`
 - Portfolio role: customer-facing storefront paired with Better Ecommerce Admin
 
 ## Current Milestone
@@ -31,15 +31,15 @@ providers, adding new commerce features, or deploying either project.
       verification, limitations, and safe configuration.
 - [x] Docker development and production-like workflows are verified and
       documented.
-- [ ] The revived state is merged or pushed through a clear GitHub trail.
+- [x] The revived state is merged or pushed through a clear GitHub trail.
 
 ## Now
 
-- [ ] Push or merge the revived state through a clear GitHub trail.
+- No active work. The revival milestone is complete.
 
 ## Next
 
-- No additional work before the revival milestone is complete.
+- Choose and inspect the next queued revival before activating it.
 
 ## Later
 
@@ -80,3 +80,5 @@ providers, adding new commerce features, or deploying either project.
 - [x] Verified by user-approved test on 2026-06-20: the storefront created a
       PayMongo test checkout session for the seeded `Classic Hoodie` and
       reached the hosted PayMongo checkout page. No payment was completed.
+- [x] Merged GitHub PR #3 on 2026-06-20:
+      `https://github.com/reannu123/better-ecommerce-store/pull/3`.
