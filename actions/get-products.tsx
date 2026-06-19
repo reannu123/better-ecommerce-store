@@ -1,8 +1,8 @@
 import { Product } from "@/types";
 import qs from "query-string";
-import { env } from "next-runtime-env";
+import { getStoreApiUrl } from "@/lib/api";
 
-const URL = `${env("NEXT_PUBLIC_API_URL")}/products`;
+const URL = `${getStoreApiUrl()}/products`;
 
 interface Query {
   categoryId?: string;
